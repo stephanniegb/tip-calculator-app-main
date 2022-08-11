@@ -1,0 +1,278 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: hsl(186deg, 14%, 43%);
+  background-color: hsl(185deg, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  max-width: 75em;
+}
+
+main {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 1.5em;
+  border-radius: 15px;
+}
+
+#right-cal {
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+p,
+input,
+small,
+button {
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+small {
+  color: hsl(186deg, 14%, 43%);
+}
+
+::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+::placeholder {
+  font-size: 1.4rem;
+}
+
+body {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 56.25em) {
+  body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 56.25em) {
+  main {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1.5rem;
+  }
+}
+
+#percent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 56.25em) {
+  #percent {
+    grid-template-columns: 1fr 1fr 1fr;
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+    padding-inline: 0;
+  }
+}
+
+#right-cal {
+  padding: 2rem;
+  max-width: 18.7em;
+  height: auto;
+}
+@media (min-width: 56.25em) {
+  #right-cal {
+    max-width: 300px;
+  }
+}
+
+.price-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
+}
+
+:root {
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --light-cyan: hsl(186, 68%, 77%);
+  --cyan: hsl(172, 67%, 45%);
+  --White: hsl(0, 0%, 100%);
+  --soft-red: hsl(0, 82%, 53%);
+}
+
+#logo {
+  padding: 2rem;
+}
+
+.tip-opp {
+  font-size: 1.2rem;
+  text-align: center;
+  width: 7rem;
+  background-color: var(--Very-dark-cyan);
+  color: var(--Light-grayish-cyan);
+  padding: 0.8rem;
+}
+.tip-opp:active {
+  background-color: var(--light-cyan);
+  color: var(--Very-dark-cyan);
+}
+.tip-opp:hover {
+  background-color: var(--light-cyan);
+  color: var(--Very-dark-cyan);
+}
+@media (min-width: 56.25em) {
+  .tip-opp {
+    width: 6rem;
+  }
+}
+
+#custom {
+  width: 7rem;
+  text-align: center;
+}
+#custom::-moz-placeholder {
+  font-size: 1.1rem;
+}
+#custom:-ms-input-placeholder {
+  font-size: 1.1rem;
+}
+#custom::placeholder {
+  font-size: 1.1rem;
+}
+@media (min-width: 56.25em) {
+  #custom {
+    width: 6rem;
+  }
+}
+
+#small-para {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--soft-red);
+  visibility: hidden;
+}
+
+.err-input:focus {
+  outline: none;
+  border: 1px solid var(--soft-red) !important;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: none;
+  background-color: var(--Very-light-grayish-cyan);
+  text-align: end;
+  color: hsl(183deg, 100%, 15%);
+  margin-bottom: 1rem;
+}
+input:hover {
+  cursor: pointer;
+}
+input:focus {
+  outline: none;
+}
+
+#left-cal input:focus {
+  outline: none;
+  border: 1px solid var(--cyan);
+}
+
+.form-icon {
+  position: relative;
+}
+
+.container img {
+  width: 0.8rem;
+  position: absolute;
+}
+
+#img {
+  left: 4%;
+  top: 25%;
+}
+
+#right-cal img {
+  width: 1.1rem;
+  left: 50%;
+  top: 20%;
+}
+
+#doll-icon {
+  left: 4%;
+  top: 4%;
+}
+
+.price {
+  background-color: var(--Very-dark-cyan);
+  color: var(--cyan);
+}
+.price::-moz-placeholder {
+  font-size: 2rem;
+  color: var(--cyan);
+  opacity: 1;
+}
+.price:-ms-input-placeholder {
+  font-size: 2rem;
+  color: var(--cyan);
+  opacity: 1;
+}
+.price::placeholder {
+  font-size: 2rem;
+  color: var(--cyan);
+  opacity: 1;
+}
+
+#right-cal button {
+  background-color: var(--cyan);
+  color: var(--Very-dark-cyan);
+  border: none;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+}
+#right-cal button:active {
+  background-color: var(--Very-dark-cyan);
+  cursor: pointer;
+}
+#right-cal button:hover {
+  background-color: var(--light-cyan);
+}
+@media (min-width: 56.25em) {
+  #right-cal button {
+    margin-top: 4.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

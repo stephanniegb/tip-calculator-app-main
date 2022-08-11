@@ -1,0 +1,132 @@
+:root {
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --light-cyan: hsl(186, 68%, 77%);
+  --cyan: hsl(172, 67%, 45%);
+  --White: hsl(0, 0%, 100%);
+  --soft-red: hsl(0, 82%, 53%);
+}
+#logo {
+  padding: 2rem;
+}
+.tip-opp {
+  font-size: 1.2rem;
+  text-align: center;
+  width: 7rem;
+  background-color: var(--Very-dark-cyan);
+  color: var(--Light-grayish-cyan);
+  padding: 0.8rem;
+  &:active {
+    background-color: var(--light-cyan);
+    color: var(--Very-dark-cyan);
+  }
+  &:hover {
+    background-color: var(--light-cyan);
+    color: var(--Very-dark-cyan);
+  }
+  @media (min-width: 56.25em) {
+    width: 6rem;
+  }
+}
+#custom {
+  width: 7rem;
+  text-align: center;
+  &::placeholder {
+    font-size: 1.1rem;
+  }
+  @media (min-width: 56.25em) {
+    width: 6rem;
+  }
+}
+#small-para {
+  display: flex;
+  justify-content: space-between;
+}
+.error {
+  font-size: 0.8rem;
+  color: var(--soft-red);
+  visibility: hidden;
+}
+.err-input {
+  &:focus {
+    outline: none;
+    border: 1px solid var(--soft-red) !important;
+  }
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: none;
+  background-color: var(--Very-light-grayish-cyan);
+  text-align: end;
+  color: hsl(183, 100%, 15%);
+  margin-bottom: 1rem;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+#left-cal input {
+  &:focus {
+    outline: none;
+    border: 1px solid var(--cyan);
+  }
+}
+
+.form-icon {
+  position: relative;
+}
+.container img {
+  width: 0.8rem;
+  position: absolute;
+}
+#img {
+  left: 4%;
+  top: 25%;
+}
+
+#right-cal img {
+  width: 1.1rem;
+  left: 50%;
+  top: 20%;
+}
+#doll-icon {
+  left: 4%;
+  top: 4%;
+}
+
+.price {
+  background-color: var(--Very-dark-cyan);
+  color: var(--cyan);
+  &::placeholder {
+    font-size: 2rem;
+    color: var(--cyan);
+    opacity: 1;
+  }
+}
+#right-cal button {
+  background-color: var(--cyan);
+  color: var(--Very-dark-cyan);
+  border: none;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  &:active {
+    background-color: var(--Very-dark-cyan);
+    cursor: pointer;
+  }
+  &:hover {
+    background-color: var(--light-cyan);
+  }
+  @media (min-width: 56.25em) {
+    margin-top: 4.5rem;
+  }
+}

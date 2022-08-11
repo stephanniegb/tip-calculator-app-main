@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+*,
+*::after,
+::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: hsl(186, 14%, 43%);
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  max-width: 75em;
+}
+main {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5em;
+  border-radius: 15px;
+}
+#right-cal {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+}

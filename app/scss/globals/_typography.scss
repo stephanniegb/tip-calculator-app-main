@@ -1,0 +1,15 @@
+p,
+input,
+small,
+button {
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  margin-top: 0;
+}
+small {
+  color: hsl(186, 14%, 43%);
+}
+::placeholder {
+  font-size: 1.4rem;
+}

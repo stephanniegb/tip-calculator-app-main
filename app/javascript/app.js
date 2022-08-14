@@ -92,3 +92,14 @@ function removeError() {
   error.style.visibility = "hidden";
   peopleInput.classList.remove("err-input");
 }
+//reset functionality
+const inputArray = [billInput, peopleInput, tipInput, totalInput, tipcustom];
+const resetBtn = document.getElementById("reset-btn");
+resetBtn.addEventListener("click", (e) => {
+  reset(inputArray);
+});
+function reset(array) {
+  array.forEach((item) => {
+    item.removeAttribute("value", "");
+  });
+}

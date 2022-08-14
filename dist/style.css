@@ -184,9 +184,11 @@ body {
   visibility: hidden;
 }
 
+.err-input {
+  border: 1px solid var(--soft-red) !important;
+}
 .err-input:focus {
   outline: none;
-  border: 1px solid var(--soft-red) !important;
 }
 
 input {

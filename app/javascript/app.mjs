@@ -2,7 +2,6 @@ const billInput = document.getElementById("bill-input");
 const peopleInput = document.getElementById("people-input");
 const tipInput = document.getElementById("tip-input");
 const totalInput = document.getElementById("total-input");
-const peopleValue = parseInt(peopleInput.value, 10);
 //currency formatter
 const formatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -17,31 +16,35 @@ const tip50 = document.getElementById("fifty-percent");
 const tipcustom = document.getElementById("custom");
 
 let numOfPeople;
-tip5.addEventListener("click", (e) => {
-  numOfPeople = parseInt(peopleInput.value, 10);
-  validate(tip5);
-});
-tip10.addEventListener("click", (e) => {
-  numOfPeople = parseInt(peopleInput.value, 10);
-  validate(tip10);
-});
-tip15.addEventListener("click", (e) => {
-  numOfPeople = parseInt(peopleInput.value, 10);
-  validate(tip15);
-});
-tip25.addEventListener("click", (e) => {
-  numOfPeople = parseInt(peopleInput.value, 10);
-  validate(tip25);
-});
-tip50.addEventListener("click", (e) => {
-  numOfPeople = parseInt(peopleInput.value, 10);
-  validate(tip50);
-});
-tipcustom.addEventListener("input", (e) => {
-  numOfPeople = parseInt(peopleInput.value, 10);
-  customValidate(tipcustom);
-});
-
+function startApp() {
+  tip5.addEventListener("click", (e) => {
+    numOfPeople = parseInt(peopleInput.value, 10);
+    validate(tip5);
+  });
+  tip10.addEventListener("click", (e) => {
+    numOfPeople = parseInt(peopleInput.value, 10);
+    validate(tip10);
+  });
+  tip15.addEventListener("click", (e) => {
+    numOfPeople = parseInt(peopleInput.value, 10);
+    validate(tip15);
+  });
+  tip25.addEventListener("click", (e) => {
+    numOfPeople = parseInt(peopleInput.value, 10);
+    validate(tip25);
+  });
+  tip50.addEventListener("click", (e) => {
+    numOfPeople = parseInt(peopleInput.value, 10);
+    validate(tip50);
+  });
+  tipcustom.addEventListener("input", (e) => {
+    numOfPeople = parseInt(peopleInput.value, 10);
+    customValidate(tipcustom);
+  });
+  resetBtn.addEventListener("click", (e) => {
+    reset(inputArray);
+  });
+}
 function validate(tip) {
   if (peopleInput.value <= 0 || peopleInput.value == " ") {
     addError();
@@ -95,11 +98,12 @@ function removeError() {
 //reset functionality
 const inputArray = [billInput, peopleInput, tipInput, totalInput, tipcustom];
 const resetBtn = document.getElementById("reset-btn");
-resetBtn.addEventListener("click", (e) => {
-  reset(inputArray);
-});
+// resetBtn.addEventListener("click", (e) => {
+//   reset(inputArray);
+// });
 function reset(array) {
   array.forEach((item) => {
     item.removeAttribute("value", "");
   });
 }
+export default startApp;

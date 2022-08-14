@@ -1,0 +1,27 @@
+#logo {
+  padding: 2rem;
+}
+.form-icon {
+  position: relative;
+}
+.container {
+  img {
+    width: 0.8rem;
+    position: absolute;
+  }
+  &__dollar-icon {
+    left: 4%;
+    top: 4%;
+  }
+  &__person-icon {
+    left: 4%;
+    top: 25%;
+  }
+}
+#right-cal {
+  img {
+    width: 1.1rem;
+    left: 50%;
+    top: 20%;
+  }
+}

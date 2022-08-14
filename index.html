@@ -14,6 +14,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./dist/style.css" />
+    <script src="./app/javascript/app.js" defer></script>
     <title>Frontend Mentor | Tip calculator app</title>
     <link
       rel="icon"
@@ -22,33 +23,56 @@
       href="./images/favicon-32x32.png"
     />
   </head>
-  <body>
+  <body class="grid">
     <img src="./images/logo.svg" alt="app logo" id="logo" />
 
     <main class="container">
       <section id="left-cal">
         <p>Bill</p>
         <form action="" class="form-icon">
-          <input type="text" placeholder="0" />
-          <img id="doll-icon" src="./images/icon-dollar.svg" alt="icon" />
+          <input id="bill-input" type="text" placeholder="0" />
+          <img
+            class="container__dollar-icon"
+            src="./images/icon-dollar.svg"
+            alt="icon"
+          />
 
           <p>select tip %</p>
           <div id="percent">
-            <input class="tip-opp" type="button" value="5%" />
-            <input class="tip-opp" type="button" value="10%" />
-            <input class="tip-opp" type="button" value="15%" />
-            <input class="tip-opp" type="button" value="25%" />
-            <input class="tip-opp" type="button" value="50%" />
+            <input id="five-percent" class="tip-opp" type="button" value="5%" />
+            <input id="ten-percent" class="tip-opp" type="button" value="10%" />
+            <input
+              id="fifteen-percent"
+              class="tip-opp"
+              type="button"
+              value="15%"
+            />
+            <input
+              id="twentyFive-percent"
+              class="tip-opp"
+              type="button"
+              value="25%"
+            />
+            <input
+              id="fifty-percent"
+              class="tip-opp"
+              type="button"
+              value="50%"
+            />
             <input id="custom" type="text" name="" id="" placeholder="custom" />
           </div>
         </form>
         <div id="small-para">
           <small>Number of People</small>
-          <small class="error">can't be zero</small>
+          <small id="error">can't be zero</small>
         </div>
         <form action="" class="form-icon">
-          <input type="text" placeholder="0" />
-          <img id="img" src="./images/icon-person.svg" alt="icon" />
+          <input id="people-input" type="text" placeholder="0" />
+          <img
+            class="container__person-icon"
+            src="./images/icon-person.svg"
+            alt="icon"
+          />
         </form>
       </section>
 
@@ -59,7 +83,12 @@
               >Tip Amount <br />
               <small>/ person</small>
             </label>
-            <input class="price" type="text" placeholder="0.00" />
+            <input
+              class="price"
+              id="tip-input"
+              type="text"
+              placeholder="0.00"
+            />
             <img src="./images/icon-dollar.svg" alt="logo" />
           </div>
           <div class="price-div form-icon">
@@ -67,7 +96,12 @@
               >Total<br />
               <small>/ person</small></label
             >
-            <input class="price" type="text" placeholder="0.00" />
+            <input
+              id="total-input"
+              class="price"
+              type="text"
+              placeholder="0.00"
+            />
             <img src="./images/icon-dollar.svg" alt="logo" />
           </div>
           <button type="reset">Reset</button>

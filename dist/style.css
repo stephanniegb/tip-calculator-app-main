@@ -127,8 +127,9 @@ body {
   --soft-red: hsl(0, 82%, 53%);
 }
 
-#logo {
-  padding: 2rem;
+#left-cal input:focus {
+  outline: none;
+  border: 1px solid var(--cyan);
 }
 
 .tip-opp {
@@ -177,7 +178,7 @@ body {
   justify-content: space-between;
 }
 
-.error {
+#error {
   font-size: 0.8rem;
   color: var(--soft-red);
   visibility: hidden;
@@ -204,36 +205,6 @@ input:hover {
 }
 input:focus {
   outline: none;
-}
-
-#left-cal input:focus {
-  outline: none;
-  border: 1px solid var(--cyan);
-}
-
-.form-icon {
-  position: relative;
-}
-
-.container img {
-  width: 0.8rem;
-  position: absolute;
-}
-
-#img {
-  left: 4%;
-  top: 25%;
-}
-
-#right-cal img {
-  width: 1.1rem;
-  left: 50%;
-  top: 20%;
-}
-
-#doll-icon {
-  left: 4%;
-  top: 4%;
 }
 
 .price {
@@ -275,4 +246,31 @@ input:focus {
   #right-cal button {
     margin-top: 4.5rem;
   }
+}
+
+#logo {
+  padding: 2rem;
+}
+
+.form-icon {
+  position: relative;
+}
+
+.container img {
+  width: 0.8rem;
+  position: absolute;
+}
+.container__dollar-icon {
+  left: 4%;
+  top: 4%;
+}
+.container__person-icon {
+  left: 4%;
+  top: 25%;
+}
+
+#right-cal img {
+  width: 1.1rem;
+  left: 50%;
+  top: 20%;
 }/*# sourceMappingURL=style.css.map */

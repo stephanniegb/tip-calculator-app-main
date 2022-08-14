@@ -9,8 +9,11 @@
   --White: hsl(0, 0%, 100%);
   --soft-red: hsl(0, 82%, 53%);
 }
-#logo {
-  padding: 2rem;
+#left-cal input {
+  &:focus {
+    outline: none;
+    border: 1px solid var(--cyan);
+  }
 }
 .tip-opp {
   font-size: 1.2rem;
@@ -45,7 +48,7 @@
   display: flex;
   justify-content: space-between;
 }
-.error {
+#error {
   font-size: 0.8rem;
   color: var(--soft-red);
   visibility: hidden;
@@ -74,35 +77,6 @@ input {
     outline: none;
   }
 }
-#left-cal input {
-  &:focus {
-    outline: none;
-    border: 1px solid var(--cyan);
-  }
-}
-
-.form-icon {
-  position: relative;
-}
-.container img {
-  width: 0.8rem;
-  position: absolute;
-}
-#img {
-  left: 4%;
-  top: 25%;
-}
-
-#right-cal img {
-  width: 1.1rem;
-  left: 50%;
-  top: 20%;
-}
-#doll-icon {
-  left: 4%;
-  top: 4%;
-}
-
 .price {
   background-color: var(--Very-dark-cyan);
   color: var(--cyan);

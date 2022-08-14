@@ -3,6 +3,11 @@ const peopleInput = document.getElementById("people-input");
 const tipInput = document.getElementById("tip-input");
 const totalInput = document.getElementById("total-input");
 const peopleValue = parseInt(peopleInput.value, 10);
+//currency formatter
+const formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
 
 const tip5 = document.getElementById("five-percent");
 const tip10 = document.getElementById("ten-percent");
@@ -56,24 +61,26 @@ function customValidate(tip) {
 function calculate(tipBtn) {
   let tipValue = parseInt(tipBtn.value, 10);
   let percentValue = (tipValue / 100) * billInput.value;
-  let tipResult = percentValue / numOfPeople;
-  console.log(tipValue);
-  console.log(billInput.value);
-  console.log(numOfPeople);
+  let result = percentValue / numOfPeople;
+  let tipResult = formatter.format(result);
   tipInput.setAttribute("value", tipResult);
+
   // for total value
-  // let totalValue = parseInt(totalInput.value, 10)
-  // let total = totalValue +
+  let totalValue = billInput.value / numOfPeople + result;
+  let totalResult = formatter.format(totalValue);
+  totalInput.setAttribute("value", totalResult);
 }
 // a different function is needed for the custom to prvent NaN value from the field
 function customCalculate(btn) {
   let tipValue = btn.value;
   let percentValue = (tipValue / 100) * billInput.value;
-  let tipResult = percentValue / numOfPeople;
-  console.log(tipValue);
-  console.log(billInput.value);
-  console.log(numOfPeople);
+  let result = percentValue / numOfPeople;
+  let tipResult = formatter.format(result);
   tipInput.setAttribute("value", tipResult);
+  // for total value
+  let totalValue = billInput.value / numOfPeople + result;
+  let totalResult = formatter.format(totalValue);
+  totalInput.setAttribute("value", totalResult);
 }
 //error functions
 const error = document.getElementById("error");

@@ -210,6 +210,7 @@ input:focus {
 .price {
   background-color: var(--Very-dark-cyan);
   color: var(--cyan);
+  font-size: 1.8rem;
 }
 .price::-moz-placeholder {
   font-size: 2rem;
